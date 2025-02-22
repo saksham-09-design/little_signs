@@ -21,7 +21,7 @@ class _ImageViewerComponentState extends State<ImageViewerComponent> {
       if (_currentIndex < widget.titles.length - 1) {
         _currentIndex++;
       } else {
-        _currentIndex = 0; // Loop back to the first image
+        _currentIndex = 0;
       }
     });
   }
