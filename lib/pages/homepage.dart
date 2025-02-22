@@ -196,7 +196,12 @@ class _Homepage extends State<Homepage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => LearningScreen(),
+                          builder: (context) => LearningScreen(
+                            category: categories[index],
+                            level: level,
+                            deviceHeight: _deviceHeight!,
+                            deviceWidth: _deviceWidth!,
+                          ),
                         ),
                       );
                     } else {

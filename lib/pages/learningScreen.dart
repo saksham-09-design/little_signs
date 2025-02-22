@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:little_signs/Components/ImageTestComponent.dart';
 import 'package:little_signs/Components/imageComponent.dart';
 import 'package:little_signs/Components/styledText.dart';
 import 'package:little_signs/colors/appColors.dart';
+import 'package:little_signs/pages/homepage.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LearningScreen extends StatelessWidget {
   final String category;
@@ -71,6 +74,11 @@ class LearningScreen extends StatelessWidget {
     );
   }
 
+  Future<void> updateUserLevel(int level) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setInt('userLevel', level);
+  }
+
   Widget _learningScreenAlpha(BuildContext context) {
     final titles = [
       'A',
@@ -132,7 +140,34 @@ class LearningScreen extends StatelessWidget {
                       BorderSide(color: Colors.white, width: 2),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ImageTestWindow(
+                          imageTitles: const ['M', 'B', 'Q', 'W', 'R'],
+                          options: const [
+                            ['N', 'P', 'M', 'S'],
+                            ['R', 'P', 'B', 'L'],
+                            ['O', 'Q', 'A', 'N'],
+                            ['S', 'V', 'C', 'W'],
+                            ['P', 'R', 'B', 'X']
+                          ],
+                          correctAnswers: const [2, 2, 1, 3, 1],
+                          onPass: () {
+                            updateUserLevel((level > 1) ? level : 1);
+                            Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Homepage(),
+                              ),
+                              (route) => false,
+                            );
+                          },
+                        ),
+                      ),
+                    );
+                  },
                   child: const Text(
                     'Continue to Test',
                     style: TextStyle(
@@ -180,7 +215,34 @@ class LearningScreen extends StatelessWidget {
                       BorderSide(color: Colors.white, width: 2),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ImageTestWindow(
+                          imageTitles: const ['3', '7', '8', '2', '10'],
+                          options: const [
+                            ['1', '4', '3', '2'],
+                            ['7', '8', '6', '5'],
+                            ['9', '6', '8', '10'],
+                            ['4', '2', '1', '3'],
+                            ['10', '4', '7', '2']
+                          ],
+                          correctAnswers: const [2, 0, 2, 1, 0],
+                          onPass: () {
+                            updateUserLevel((level > 2) ? level : 2);
+                            Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Homepage(),
+                              ),
+                              (route) => false,
+                            );
+                          },
+                        ),
+                      ),
+                    );
+                  },
                   child: const Text(
                     'Continue to Test',
                     style: TextStyle(
