@@ -22,11 +22,11 @@ To run this app on your local device, follow these steps:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/Little-Signs.git
+   git clone https://github.com/saksham-09-design/little_signs
    ```
 2. Navigate to the project folder:
    ```sh
-   cd Little-Signs
+   cd little_signs
    ```
 3. Install dependencies:
    ```sh
