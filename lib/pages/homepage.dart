@@ -6,6 +6,7 @@ import 'package:little_signs/Components/gridLetter.dart';
 import 'package:little_signs/Components/styledText.dart';
 import 'package:little_signs/Components/wavingHand.dart';
 import 'package:little_signs/colors/appColors.dart';
+import 'package:little_signs/pages/aboutpage.dart';
 import 'package:little_signs/pages/learningScreen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -81,7 +82,13 @@ class _Homepage extends State<Homepage> {
           backgroundColor: textPurple,
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (BuildContext context) => AboutScreen()),
+            );
+          },
           backgroundColor: textPurple,
           shape: const CircleBorder(),
           child: const Icon(Icons.info, color: Colors.white),
