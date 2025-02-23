@@ -1,16 +1,62 @@
-# little_signs
+# Little Signs
 
-A new Flutter project.
+<img src="https://github.com/user-attachments/assets/730764cd-a513-4d74-a0d1-b368d5ab381c" alt="Home Screen" width="300"> <br>
+**An interactive learning app for Indian Sign Language (ISL).**
 
-## Getting Started
+## 📌 Overview
+Little Signs is an engaging and interactive mobile application designed to help specially-abled children and learners explore **Indian Sign Language (ISL)** in a fun and structured way. The app includes progressive learning features, tests, and tracking functionalities to ensure effective learning.
 
-This project is a starting point for a Flutter application.
+## 📸 Screenshots
 
-A few resources to get you started if this is your first Flutter project:
+<img src="https://github.com/user-attachments/assets/0e7fcf4e-f7d4-4c8b-801a-df64882d17f9" alt="Home Screen" width="300"> <img src="https://github.com/user-attachments/assets/2f8b2742-60fd-4a7a-b604-2a9521520659" alt="Learning Module" width="300"> <img src="https://github.com/user-attachments/assets/7ad6e467-f108-4659-809c-42ebb6a59b4e" alt="Test Window" width="300"> <img src="https://github.com/user-attachments/assets/5e65d1cf-f616-401a-9357-0e57d95efd62" alt="Test Completion" width="300"> <img src="https://github.com/user-attachments/assets/cb5084d5-8499-4632-8a0f-24bc4eedee41" alt="Random Test Feature" width="300"> <img src="https://github.com/user-attachments/assets/06c1fd00-65d0-4d08-8cc0-ad76b46966db" alt="Random Test Feature" width="300">
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🚀 Features
+✅ **Interactive Learning of ISL** - Engaging lessons to learn sign language with visual and interactive elements.  
+✅ **Progress Tracking** - Users can track their learning journey through a personalized dashboard.  
+✅ **250+ Words** - A vast vocabulary to learn and practice.  
+✅ **13+ Structured Tests** - Dedicated tests for different learning levels.  
+✅ **Unlimited Random Tests** - Users can take tests anytime to reinforce their knowledge.  
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🔧 Installation
+To run this app on your local device, follow these steps:
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/Little-Signs.git
+   ```
+2. Navigate to the project folder:
+   ```sh
+   cd Little-Signs
+   ```
+3. Install dependencies:
+   ```sh
+   flutter pub get
+   ```
+4. Run the app:
+   ```sh
+   flutter run
+   ```
+
+## 📦 Releases
+| Version | Release Date | Features |
+|---------|-------------|----------|
+| 1.0.0   | 2025-02-23  | Initial release with core features |
+
+## 🔮 Future Scope
+🚀 **AI-Based Progressive Learning** - Implementing AI to customize learning paths based on user progress.  
+📚 **More Words** - Expanding the vocabulary with additional words for better communication.  
+📝 **Sentence Additions** - Introducing sentence-based learning to enhance real-life conversations.  
+
+## 🤝 Contributing
+We welcome contributions! Feel free to **fork** the repository and submit pull requests. For major changes, open an issue first to discuss proposed updates.
+
+## 📜 License
+This project is licensed under the **MIT License**.
+
+## 📞 Contact
+For any queries or suggestions, reach out to **your.email@example.com** or open an issue on GitHub.
+
+---
+
+_"Making learning accessible and fun for everyone!"_ ✨
+
