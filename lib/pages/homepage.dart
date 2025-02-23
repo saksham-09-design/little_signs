@@ -1,4 +1,7 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:little_signs/Components/VideoTestComponent.dart';
 import 'package:little_signs/Components/gridLetter.dart';
 import 'package:little_signs/Components/styledText.dart';
 import 'package:little_signs/Components/wavingHand.dart';
@@ -141,7 +144,124 @@ class _Homepage extends State<Homepage> {
                             BorderSide(color: Colors.white, width: 2),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          if (level == 15) {
+                            var random = Random();
+                            List<String> vtitle = <String>[];
+                            List<List<String>> voptions = <List<String>>[];
+                            List<int> vcorrect = <int>[];
+                            List<String> allTitles = const [
+                              'answer',
+                              'april',
+                              'bad',
+                              'bandage',
+                              'bank',
+                              'beautiful',
+                              'birthday',
+                              'bulb',
+                              'bye',
+                              'calendar',
+                              'cat',
+                              'chair',
+                              'cheap',
+                              'chocolate',
+                              'class',
+                              'computer',
+                              'cycle',
+                              'december',
+                              'dentist',
+                              'dinner',
+                              'dog',
+                              'dress',
+                              'elephant',
+                              'fast',
+                              'fire',
+                              'fish',
+                              'forgive',
+                              'goodnight',
+                              'holiday',
+                              'india',
+                              'january',
+                              'june',
+                              'market',
+                              'monday',
+                              'never',
+                              'no',
+                              'november',
+                              'nurse',
+                              'opinion',
+                              'pain',
+                              'pen',
+                              'pencil',
+                              'police',
+                              'polite',
+                              'rat',
+                              'rest',
+                              'rupee',
+                              'safe',
+                              'school',
+                              'sunday',
+                              'tea',
+                              'teacher',
+                              'thankyou',
+                              'thirsty',
+                              'today',
+                              'tomorrow',
+                              'toothbrush',
+                              'uncomfortable',
+                              'vomiting',
+                              'wallet',
+                              'washroom',
+                              'water',
+                              'what',
+                              'which',
+                              'yes'
+                            ];
+                            vtitle = List.of(allTitles)..shuffle();
+                            vtitle = vtitle.sublist(0, 5);
+                            for (String title in vtitle) {
+                              List<String> tempOptions = List.of(allTitles)
+                                ..shuffle();
+                              tempOptions.remove(title);
+                              List<String> chosenOptions =
+                                  tempOptions.sublist(0, 3);
+                              int correctIndex = random.nextInt(4);
+                              chosenOptions.insert(correctIndex, title);
+                              voptions.add(chosenOptions);
+                              vcorrect.add(correctIndex);
+                            }
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => VideoTestWindow(
+                                  videoTitles: vtitle,
+                                  options: voptions,
+                                  correctAnswers: vcorrect,
+                                  onPass: () {
+                                    Navigator.pushAndRemoveUntil(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => Homepage(),
+                                      ),
+                                      (route) => false,
+                                    );
+                                  },
+                                ),
+                              ),
+                            );
+                          } else {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                backgroundColor: textPurple,
+                                content: const Text(
+                                  'Unlock all levels to unlock Random test!',
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
+                            );
+                          }
+                        
+                        },
                         child: const Text(
                           'Random Test',
                           style: TextStyle(
