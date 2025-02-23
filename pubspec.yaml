@@ -67,6 +67,7 @@ flutter:
     - assets/images/signs/
     - assets/images/categories/
     - assets/videos/
+    - assets/TestVideos/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

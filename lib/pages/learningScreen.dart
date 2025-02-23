@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:little_signs/Components/ImageTestComponent.dart';
+import 'package:little_signs/Components/VideoTestComponent.dart';
 import 'package:little_signs/Components/imageComponent.dart';
 import 'package:little_signs/Components/styledText.dart';
 import 'package:little_signs/Components/videoPlayer.dart';
@@ -576,7 +577,248 @@ class LearningScreen extends StatelessWidget {
                       BorderSide(color: Colors.white, width: 2),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    List<String> vtitle = <String>[];
+                    List<List<String>> voptions = <List<String>>[];
+                    List<int> vcorrect = <int>[];
+                    int levelu = 0;
+                    if (category == 'Animal') {
+                      vtitle = const ['cat', 'dog', 'rat', 'elephant', 'fish'];
+                      voptions = const [
+                        ['Dog', 'Elephant', 'Mouse', 'Cat'],
+                        ['Cow', 'Zebra', 'Dog', 'Camel'],
+                        ['Rat', 'Elephant', 'Fish', 'Cow'],
+                        ['Elephant', 'Monkey', 'Cat', 'Dog'],
+                        ['Rat', 'Fish', 'Dog', 'Monkey']
+                      ];
+                      vcorrect = const [3, 2, 0, 0, 1];
+                      levelu = 10;
+                    } else if (category == 'Behaviour') {
+                      vtitle = const [
+                        'bad',
+                        'beautiful',
+                        'pain',
+                        'polite',
+                        'thankyou'
+                      ];
+                      voptions = const [
+                        ['Good', 'Bad', 'Worst', 'Happy'],
+                        ['Beautiful', 'Cute', 'Feel', 'Ugly'],
+                        ['Ego', 'Pain', 'Sad', 'Bad'],
+                        ['Polite', 'Silent', 'Rough', 'Anger'],
+                        ['Sorry', 'Sad', 'Thank You', 'Welcome']
+                      ];
+                      vcorrect = const [1, 0, 1, 0, 2];
+                      levelu = 3;
+                    } else if (category == 'Days') {
+                      vtitle = const [
+                        'holiday',
+                        'monday',
+                        'sunday',
+                        'today',
+                        'tomorrow'
+                      ];
+                      voptions = const [
+                        ['Today', 'Tomorrow', 'Holiday', 'Sunday'],
+                        ['Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+                        ['Monday', 'Sunday', 'Wednesday', 'Holiday'],
+                        ['Tomorrow', 'Today', 'Saturday', 'Holiday'],
+                        ['Yesterday', 'Tomorrow', 'Monday', 'Saturday']
+                      ];
+                      vcorrect = const [2, 0, 1, 1, 1];
+                      levelu = 8;
+                    } else if (category == 'Finance') {
+                      vtitle = const [
+                        'bank',
+                        'cheap',
+                        'opinion',
+                        'rupee',
+                        'wallet'
+                      ];
+                      voptions = const [
+                        ['Wallet', 'Rupee', 'Bank', 'Calculator'],
+                        ['Cheap', 'Money', 'Economy', 'Opinion'],
+                        ['Opinion', 'Rupee', 'Demand', 'Credit'],
+                        ['Money', 'Rupee', 'Cash', 'Bank'],
+                        ['Wallet', 'Calculator', 'Supply', 'Economy']
+                      ];
+                      vcorrect = const [2, 0, 0, 1, 0];
+                      levelu = 15;
+                    } else if (category == 'Essentials') {
+                      vtitle = const [
+                        'computer',
+                        'dress',
+                        'india',
+                        'market',
+                        'rest'
+                      ];
+                      voptions = const [
+                        ['Calculator', 'Question', 'Computer', 'Remote'],
+                        ['Clothes', 'Dress', 'Shoe', 'Happy'],
+                        ['India', 'Country', 'City', 'Computer'],
+                        ['Market', 'Pen', 'Shop', 'World'],
+                        ['Pain', 'Rest', 'Yes', 'Tired']
+                      ];
+                      vcorrect = const [2, 1, 0, 0, 1];
+                      levelu = 5;
+                    } else if (category == 'Food') {
+                      vtitle = const [
+                        'chocolate',
+                        'dinner',
+                        'tea',
+                        'thirsty',
+                        'water'
+                      ];
+                      voptions = const [
+                        ['Rasogulla', 'Candy', 'Chocolate', 'Chapati'],
+                        ['Dinner', 'Lunch', 'Food', 'Break Fast'],
+                        ['Coffee', 'Tea', 'Juice', 'Mango'],
+                        ['Thirsty', 'Water', 'Juice', 'Orange'],
+                        ['Water', 'Lemon', 'Mango', 'Apple']
+                      ];
+                      vcorrect = const [2, 0, 1, 0, 0];
+                      levelu = 6;
+                    } else if (category == 'Health') {
+                      vtitle = const [
+                        'bandage',
+                        'dentist',
+                        'toothbrush',
+                        'vomiting',
+                        'washroom'
+                      ];
+                      voptions = const [
+                        ['Doctor', 'Bandage', 'Injection', 'Wound'],
+                        ['Doctor', 'Dentist', 'Nurse', 'Hospital'],
+                        ['Toothbrush', 'Toothpaste', 'Washroom', 'Bath'],
+                        ['Anxiety', 'Vomitting', 'Cold', 'Cough'],
+                        ['Bath', 'Room', 'Toothbrush', 'Washroom']
+                      ];
+                      vcorrect = const [1, 1, 0, 1, 3];
+                      levelu = 7;
+                    } else if (category == 'Months') {
+                      vtitle = const [
+                        'april',
+                        'december',
+                        'january',
+                        'june',
+                        'november'
+                      ];
+                      voptions = const [
+                        ['January', 'May', 'March', 'April'],
+                        ['November', 'March', 'July', 'December'],
+                        ['January', 'February', 'March', 'May'],
+                        ['July', 'June', 'April', 'May'],
+                        ['December', 'October', 'November', 'August']
+                      ];
+                      vcorrect = const [3, 3, 0, 1, 2];
+                      levelu = 9;
+                    } else if (category == 'Objects') {
+                      vtitle = const [
+                        'bulb',
+                        'calendar',
+                        'chair',
+                        'cycle',
+                        'fire'
+                      ];
+                      voptions = const [
+                        ['Light', 'Bulb', 'Torch', 'Heat'],
+                        ['Day', 'Calendar', 'Date', 'Month'],
+                        ['Table', 'Wood', 'Chair', 'Couch'],
+                        ['Motorcycle', 'Bus', 'Train', 'Cycle'],
+                        ['Cold', 'Forest', 'Heat', 'Fire']
+                      ];
+                      vcorrect = const [1, 1, 2, 3, 3];
+                      levelu = 4;
+                    } else if (category == 'Question') {
+                      vtitle = const ['answer', 'no', 'what', 'which', 'yes'];
+                      voptions = const [
+                        ['Question', 'Answer', 'What', 'When'],
+                        ['Yes', 'Where', 'No', 'Ok'],
+                        ['When', 'Where', 'What', 'Who'],
+                        ['When', 'Which', 'No', 'Whose'],
+                        ['Yes', 'No', 'Ok', 'Where']
+                      ];
+                      vcorrect = const [1, 2, 2, 1, 0];
+                      levelu = 11;
+                    } else if (category == 'School') {
+                      vtitle = const [
+                        'class',
+                        'pen',
+                        'pencil',
+                        'school',
+                        'teacher'
+                      ];
+                      voptions = const [
+                        ['School', 'Class', 'Student', 'Teacher'],
+                        ['Pen', 'Pencil', 'Note book', 'Eraser'],
+                        ['Scale', 'Geometry', 'Pencil', 'School'],
+                        ['School', 'College', 'University', 'Building'],
+                        ['Teacher', 'Student', 'Class', 'Study']
+                      ];
+                      vcorrect = const [1, 0, 2, 0, 0];
+                      levelu = 12;
+                    } else if (category == 'Social') {
+                      vtitle = const [
+                        'birthday',
+                        'bye',
+                        'forgive',
+                        'goodnight',
+                        'uncomfortable'
+                      ];
+                      voptions = const [
+                        ['Friends', 'Birthday', 'Play', 'Enjoy'],
+                        ['Hello', 'Hi', 'Bye', 'Nice'],
+                        ['Polite', 'Forgive', 'Mistake', 'Good'],
+                        [
+                          'Good Morning',
+                          'Good Afternoon',
+                          'Good Night',
+                          'Good Evening'
+                        ],
+                        ['Comfortable', 'Uncomfortable', 'Bad', 'Ignore']
+                      ];
+                      vcorrect = const [1, 2, 1, 2, 1];
+                      levelu = 13;
+                    } else if (category == 'Emergency') {
+                      vtitle = const [
+                        'fast',
+                        'never',
+                        'nurse',
+                        'police',
+                        'safe'
+                      ];
+                      voptions = const [
+                        ['Fast', 'Slow', 'Hurry Up!', 'Go'],
+                        ['No', 'Never', 'Nothing', 'Nobody'],
+                        ['Doctor', 'Dentist', 'Nurse', 'Associate'],
+                        ['Army', 'Police', 'Guard', 'Secure'],
+                        ['Secure', 'Help', 'Safe', 'Danger']
+                      ];
+                      vcorrect = const [0, 1, 2, 1, 3];
+                      levelu = 14;
+                    }
+
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => VideoTestWindow(
+                          videoTitles: vtitle,
+                          options: voptions,
+                          correctAnswers: vcorrect,
+                          onPass: () {
+                            updateUserLevel((level >= levelu) ? level : levelu);
+                            Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Homepage(),
+                              ),
+                              (route) => false,
+                            );
+                          },
+                        ),
+                      ),
+                    );
+                  },
                   child: const Text(
                     'Continue to Test',
                     style: TextStyle(
