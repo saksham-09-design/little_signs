@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:little_signs/Components/ImageTestComponent.dart';
 import 'package:little_signs/Components/imageComponent.dart';
 import 'package:little_signs/Components/styledText.dart';
+import 'package:little_signs/Components/videoPlayer.dart';
 import 'package:little_signs/colors/appColors.dart';
 import 'package:little_signs/pages/homepage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -26,6 +27,291 @@ class LearningScreen extends StatelessWidget {
         return _learningScreenAlpha(context);
       case "Numbers":
         return _learningScreenNum(context);
+      case "Behaviour":
+        final title1 = [
+          'Angry',
+          'Bad',
+          'Beautiful',
+          'Best',
+          'Big',
+          'Calm',
+          'Cute',
+          'Dark',
+          'Discipline',
+          'Disrespect',
+          'Favourite',
+          'Fear',
+          'Happy',
+          'Jealous',
+          'Like',
+          'Love',
+          'Nice',
+          'Pain',
+          'Please',
+          'Polite',
+          'Request',
+          'Rude',
+          'Sad',
+          'ThankYou',
+          'Trust',
+          'Weak'
+        ];
+        return _learningScreenMain(pTitle: title1, context: context);
+      case "Objects":
+        final title2 = [
+          'Bulb',
+          'Calander',
+          'Candle',
+          'Car',
+          'Chair',
+          'Clock',
+          'Cycle',
+          'Fire',
+          'Knife',
+          'Lock',
+          'Taxi',
+          'Tie',
+          'Umbrella'
+        ];
+        return _learningScreenMain(pTitle: title2, context: context);
+      case "Essentials":
+        final title3 = [
+          'Bag',
+          'Bathroom',
+          'Call',
+          'Change',
+          'Cold',
+          'Colour',
+          'Computer',
+          'Dress',
+          'Easy',
+          'Electricity',
+          'Find',
+          'Finish',
+          'Games',
+          'Gift',
+          'Give',
+          'Go',
+          'God',
+          'India',
+          'Life',
+          'Light',
+          'Market',
+          'Name',
+          'Open',
+          'Rest',
+          'Salwar',
+          'Shirt',
+          'Sleep',
+          'Stop',
+          'Village',
+          'Wait',
+          'WakeUp',
+          'Walk',
+          'Wedding',
+          'Wet',
+          'Window',
+          'Work',
+          'Wound'
+        ];
+        return _learningScreenMain(pTitle: title3, context: context);
+      case "Food":
+        final title = [
+          'Apple',
+          'Butter',
+          'Capsicum',
+          'Carrot',
+          'Chocolate',
+          'Coconut',
+          'Curd',
+          'Dinner',
+          'Egg',
+          'IceCream',
+          'Kitchen',
+          'Lunch',
+          'Mango',
+          'Pizza',
+          'Plate',
+          'Rasgula',
+          'Rice',
+          'Salt',
+          'Samosa',
+          'Sandwich',
+          'Spoon',
+          'Tea',
+          'Thristy',
+          'Vegetables',
+          'Water'
+        ];
+        return _learningScreenMain(pTitle: title, context: context);
+      case "Health":
+        final title4 = [
+          'Bandage',
+          'Dentist',
+          'SanitaryPad',
+          'Toothbrush',
+          'Vomiting',
+          'Washroom'
+        ];
+        return _learningScreenMain(pTitle: title4, context: context);
+      case "Days":
+        final title5 = [
+          'Friday',
+          'Holiday',
+          'Monday',
+          'Saturday',
+          'Sunday',
+          'Thursday',
+          'Today',
+          'Tomorrow',
+          'Tuesday',
+          'Wednesday',
+          'Yesterday'
+        ];
+        return _learningScreenMain(pTitle: title5, context: context);
+      case "Months":
+        final title6 = [
+          'April',
+          'August',
+          'December',
+          'February',
+          'January',
+          'July',
+          'June',
+          'March',
+          'May',
+          'November',
+          'October'
+        ];
+        return _learningScreenMain(pTitle: title6, context: context);
+      case "Animal":
+        final title7 = [
+          'Camel',
+          'Cat',
+          'Cow',
+          'Dog',
+          'Donkey',
+          'Eagle',
+          'Elephant',
+          'Fish',
+          'Rat'
+        ];
+        return _learningScreenMain(pTitle: title7, context: context);
+      case "Question":
+        final title8 = [
+          'Answer',
+          'Correct',
+          'Doubt',
+          'Mistake',
+          'No',
+          'Question',
+          'Reason',
+          'What',
+          'Where',
+          'Which',
+          'Wrong',
+          'Yes'
+        ];
+        return _learningScreenMain(pTitle: title8, context: context);
+      case "Social":
+        final title9 = [
+          'Birthday',
+          'Bye',
+          'Dance',
+          'Daughter',
+          'Evening',
+          'Family',
+          'Father',
+          'Female',
+          'Forget',
+          'Forgive',
+          'Friend',
+          'Girl',
+          'GoodMorning',
+          'GoodNight',
+          'Government',
+          'Granddaughter',
+          'Grandfather',
+          'Grandmother',
+          'Grandson',
+          'He',
+          'Know',
+          'Man',
+          'Mother',
+          'My',
+          'Myself',
+          'Namaste',
+          'Neighbour',
+          'Okay',
+          'Parents',
+          'People',
+          'Private',
+          'Self',
+          'Son',
+          'Uncle',
+          'Uncomfortable',
+          'We',
+          'Wife',
+          'Woman',
+          'YoungerBrother',
+          'YoungerSister'
+        ];
+        return _learningScreenMain(pTitle: title9, context: context);
+      case "Emergency":
+        final title10 = [
+          'BodyPain',
+          'Emergency',
+          'Fast',
+          'Never',
+          'Nurse',
+          'Police',
+          'Safe'
+        ];
+        return _learningScreenMain(pTitle: title10, context: context);
+      case "Finance":
+        final title11 = [
+          'Bank',
+          'Calculator',
+          'Cheap',
+          'Cost',
+          'Demand',
+          'Money',
+          'Opinion',
+          'Wallet'
+        ];
+        return _learningScreenMain(pTitle: title11, context: context);
+      case "School":
+        final title12 = [
+          'Class',
+          'Paper',
+          'Pen',
+          'Pencil',
+          'Play',
+          'Principal',
+          'Qualification',
+          'School',
+          'Student',
+          'Teacher',
+          'Team',
+          'Write'
+        ];
+        return _learningScreenMain(pTitle: title12, context: context);
+      case "Sentences":
+        final title13 = [
+          'Class',
+          'Paper',
+          'Pen',
+          'Pencil',
+          'Play',
+          'Principal',
+          'Qualification',
+          'School',
+          'Student',
+          'Teacher',
+          'Team',
+          'Write'
+        ];
+        return _learningScreenMain(pTitle: title13, context: context);
       default:
         return _learningScreenAlpha(context);
     }
@@ -243,6 +529,54 @@ class LearningScreen extends StatelessWidget {
                       ),
                     );
                   },
+                  child: const Text(
+                    'Continue to Test',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ));
+  }
+
+  Widget _learningScreenMain({required pTitle, required context}) {
+    final titles = pTitle;
+    return Scaffold(
+        appBar: AppBar(
+          title: topAppBar("assets/images/categories/$category.png"),
+          toolbarHeight: deviceHeight * 0.2,
+          backgroundColor: textPurple,
+        ),
+        body: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 10,
+                ),
+                SizedBox(
+                  width: deviceWidth * 0.78,
+                  height: deviceHeight * 0.65,
+                  child: VideoPlayerComponent(titles: titles),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                ElevatedButton(
+                  style: ButtonStyle(
+                    padding: const WidgetStatePropertyAll(EdgeInsets.only(
+                        left: 50, right: 50, top: 10, bottom: 10)),
+                    elevation: const WidgetStatePropertyAll(5),
+                    backgroundColor: WidgetStatePropertyAll(textPurple),
+                    side: const WidgetStatePropertyAll(
+                      BorderSide(color: Colors.white, width: 2),
+                    ),
+                  ),
+                  onPressed: () {},
                   child: const Text(
                     'Continue to Test',
                     style: TextStyle(
