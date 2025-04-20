@@ -68,7 +68,7 @@ Unauthorized use of this software is strictly prohibited and may result in legal
 
 
 ## 📞 Contact
-For any queries or suggestions, reach out to **your.email@example.com** or open an issue on GitHub.
+For any queries or suggestions, reach out to **sakshamloona9@gmail.com** or open an issue on GitHub.
 
 ---
 
