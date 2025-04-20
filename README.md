@@ -62,9 +62,9 @@ in whole or in part, without the prior written permission of the author.
 Unauthorized use of this software is strictly prohibited and may result in legal action.
 
 ⚠️ **Important Notes**
-👉 This is proprietary software. Do not use or distribute without permission.
-👉 No one can legally use, copy, modify, or share your code without your prior written consent.
-👉 I own all rights, and only I can grant or deny permission on a case-by-case basis.
+👉 This is proprietary software. Do not use or distribute without permission.<br>
+👉 No one can legally use, copy, modify, or share your code without your prior written consent.<br>
+👉 I own all rights, and only I can grant or deny permission on a case-by-case basis.<br>
 
 
 ## 📞 Contact
